@@ -1,0 +1,557 @@
+body {
+	background-color:#1F1F1F ;
+	margin: 0px;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFFF;
+	
+}
+
+/* zero margin for the text elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0px;
+}
+
+
+/* nav-bar css */
+.navigation-bar {
+	height: auto;
+	width: auto;
+	background-image: linear-gradient(180deg,#d7be69, #1F1F1F);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+    justify-content: space-between;
+	align-items: baseline;
+	box-sizing: border-box;
+	padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+	transition: all ease-in-out 0.75s; 
+}
+
+
+/* all children divs in navigation bar are inline block */
+.navigation-bar > div {
+	display: inline-block;
+}
+
+.title-logo > div {
+	vertical-align: middle;
+	display: inline-block;
+}
+
+.logo img {
+	height: 50px;
+	width: 50px;
+	border-radius: 100%;
+	animation-name: rotating;
+	animation-duration: 10s;
+    animation-iteration-count: infinite;
+    padding-top:1%;
+}
+/* subtle roatting animation for logo */
+@keyframes rotating {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+/* subtext color */
+.name h3{
+	color: #121212;
+}
+/* search bar  */
+.search-bar {
+	width: 20%;
+    position: relative;
+   /* flex-grow:2; */
+}
+/* css for the search bar */
+.search-bar input {
+	width: 100%;
+	font-size: 10px;
+	text-decoration: none;
+	border-radius: 20px;
+	border: none;
+	padding: 7px;
+	font-weight: 250;
+	text-align: center;
+	transition: all ease-in-out 0.1s;
+}
+/* default text input has a blue outline */
+input:focus {
+    outline: none;
+}
+/* color of the icons inside the search bar */
+
+.search-icon,.mic-icon{
+color:#d7be69;
+}
+
+/* modifying the icons in the search bar */
+.search-bar > div:nth-child(1) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	left: 5%;
+    top: 10%;
+    vertical-align: middle;
+    transition: all ease-in-out 0.1s;
+}
+.search-bar > div:nth-child(3) {
+	display: inline-block;
+	position: absolute;
+	width: min-content;
+	right: 0%;
+	top: 10%;
+    transition: all ease-in-out 0.1s;
+    vertical-align: middle;
+}
+/* notification bell */
+.bell{
+    vertical-align: middle;
+}
+/* display picture */
+.display-picture img {
+	width: 45px;
+	height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+/*///////////////////// main section///////////////////// */
+main {
+	width: 100%;
+	padding: 0% 4%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	transition: all ease-in-out 1s;
+}
+.content{
+        display: inline-block;
+        overflow: hidden;
+    
+}
+.main-page{
+        width: 69%;
+        height: 83vh;
+        overflow: scroll;
+        overflow-x: hidden;
+}
+.playlist{
+    width: 27%;
+	height: 83vh;
+	
+	left: -2%;
+}
+.main-page::-webkit-scrollbar {
+	display: none;
+}
+/*//////////////////////// jumbotron /////////////////*/
+.jumbotron {
+	height: 20vw;
+	width: 100%;
+	margin-top: 12px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #151515;
+	margin-bottom: 40px;
+	position: relative;
+}
+/* image insider jumbotron */
+.jumbotron-image {
+	height: 20vw;
+	width: 20vw;
+	background-image: linear-gradient(
+			to bottom,
+			transparent,
+			rgba(215,190,105,0.2)
+		),
+		url("static/carousel/1.jpg");
+	background-size: cover;
+}
+/* right part of the jumbotron */
+.jumbotron-detail {
+	width: 67%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding-right: 12px;
+}
+descriptive-part,
+.action-part {
+	width: 100%;
+	height: max-content;
+}
+.action-part{
+	padding-top: 2%;
+}
+/* song name and followers */
+.song-name-main,
+.followers {
+	display: inline-block;
+}
+/* song name heading properties */
+.song-name-main h1 {
+	font-size: 2vw;
+	color:#d7be69;
+}
+/* follower count */
+.followers {
+	position: absolute;
+	right: 2%;
+	
+}
+
+.followers,
+.author {
+	font-size: 1.3vw;
+	color: rgba(215,190,105,1);
+}
+/* description of the jumbotron */
+.desc {
+	font-size: 1vw;
+}
+.action-part p {
+	font-size: 1vw;
+	padding-top:2%;
+}
+.btns > button {
+	border: 0px;
+	height: 3vw;
+	width: 10vw;
+	color: white;
+	font-size: 1.2vw;
+}
+/* play button */
+.btns > button:nth-child(1) {
+	background-color:#1F1F1F;
+	transition:ease-in-out 0.7s;
+	cursor: pointer;
+}
+.btns > button:nth-child(1):hover {
+	background-color: #d7be69;
+} 
+/* follow button */
+.btns > button:nth-child(2) {
+	background-color: #d7be69;
+	cursor: pointer;
+}
+/* /////////playlist below jumbotron //////////////*/
+.playlist-item {
+
+	height: 8vh;
+
+	box-sizing: border-box;
+	background-color: #151515;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 12px;
+	transition: all ease-in-out 0.5s;
+}
+/* playlist item hovering effects */
+.playlist-item:hover {
+	background-color: rgba(215,190,105,0.7);
+}
+.left {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 30%;
+	height: 100%;
+	padding: 0% 1%;
+}
+/* center part of the playlist item which contains the duration length of the song */
+.center {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: min-content;
+	height: 100%;
+}
+/* right part of the playlist item, which contains icons */
+.right {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 50px;
+	height: 100%;
+	padding-right: 2%;
+}
+.left > div:nth-child(2) {
+	height: 80%;
+	min-width: 50px;
+	max-width: 50px;
+	margin: 0px 12% 0px 12%;
+	position: relative;
+}
+.left > div:nth-child(2) img {
+	width: 100%;
+	height: 100%;
+}
+.left > div:nth-child(3) p {
+	color: rgb(185, 185, 185);
+}
+.play-btn {
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	opacity: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: all ease-in-out 0.1s;
+}
+.play-btn:hover {
+	opacity: 0.7;
+}
+.left div p {
+	font-size: 14px;
+}
+.center {
+	font-size: 12px;
+	color: rgb(185, 185, 185);
+}
+.right {
+	color: rgb(185, 185, 185);
+}
+.right div:nth-child(2) {
+	margin-left: 27%;
+}
+/* //////////////// playlist///////////////// */
+.playlist{
+	display:flex ;
+	flex-direction: column;
+	align-content: space-between;
+}
+/* ///////similar artist////////////////// */
+.section-heading {
+	margin-top: 10px;
+	position: relative;
+	margin-bottom: 12px;
+	left: 2%;
+}
+/* adjusting for side by side display */
+.section-heading div,
+.section-heading h1 {
+	display: inline-block;
+}
+.section-heading h1 {
+	font-size: 23px;
+}
+.section-heading div {
+	position: absolute;
+	bottom: 0%;
+	right: 4%;
+	font-size: 14px;
+}
+.list {
+	height: 36vh;
+	overflow: scroll;
+}
+/* hiding the scrollbar */
+.list::-webkit-scrollbar {
+	display: none;
+}
+.list-item {
+	width: 100%;
+	height: 100px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	margin-bottom: 12px;
+	transition: all ease-in-out 0.5s;
+ }
+.list-item > div:nth-child(1) {
+	width: 100px;
+	height: 100%;
+	position: relative;
+}
+.list-item > div:nth-child(1) > img {
+	width: 100%;
+	height: 100%;
+}
+.list-item:hover {
+	background-color: rgba(215,190,105,0.7);
+}
+.author-name {
+	font-size: 12px;
+	color: rgb(185, 185, 185);
+}
+.extra {
+	text-align: right;
+	height: 100%;
+}
+.recently-played{
+	border-style: double;    
+	border-width:2px;
+
+	border-color: #d7be69 ;
+	background-color: #151515;	
+}
+/* ///////////foooterrr/////////// */
+footer {
+	position: absolute;
+	bottom: 1px;
+	width: 100%;
+	height: 60px;
+	background-color:RGB(161, 127, 26,0.6);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: baseline;
+	flex-wrap: nowrap;
+	padding: 0px 3%;
+	box-sizing: border-box;
+	z-index: 6;
+}
+/* footer is divided into 3 parts */
+/* 1. first part of the footer */
+.song-description-footer {
+	
+	height: 90%;
+	width: 25%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+/* the current song which is being played, this is the image container for that. */
+#song-image {
+	width: 50px;
+	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
+	padding-top: 3%;
+}
+/* current song image */
+#song-image img {
+	width: 100%;
+	height: 100%;
+}
+/* heart and ban icon */
+.heart-icon {
+	height: 100%;
+	padding-top: 7%;
+}
+/* song decscription */
+.song-name-comp {
+	margin-right: 1%;
+	/* margin-left: 1%; */
+}
+/* song name */
+.song-name-comp div:nth-child(1) {
+	font-size: 14px;
+}
+/* song author */
+.song-name-comp div:nth-child(2) {
+	font-size: 12px;
+}
+
+/* 2. Second part of the footer*/
+.player {
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+/* controls is the container for all the center controls of the player */
+.controls {
+	width: 60%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	font-size: 14px;
+}
+/* this is the song-duration slider */
+#slider {
+	width: 100%;
+	font-size: 12px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5px;
+}
+/* ////////// */
+.time {
+	margin: 0px 10px;
+}
+
+/* adjusting the slider for better visuals */
+.slidecontainer {
+	width: 100%;
+}
+/* for audio and main center player */
+.slider {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 5px;
+	background: #1F1F1F;
+	outline: none;
+	opacity: 0.5;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+/* hover effect for the slider */
+.slider:hover {
+	opacity: 1;
+}
+/* these are for adjusting the dimensions and default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 7px;
+	height: 13px;
+	background: #d7be69;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+/* this is the rectangula thumb, which can be moved across the div */
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #4caf50;
+	cursor: pointer;
+}
+
+/* third part of the footer */
+/* this contains the extra icons and slider for volume */
+/* this is also a container */
+.extras {
+	width: 20%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}

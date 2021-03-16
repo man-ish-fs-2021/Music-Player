@@ -1,0 +1,162 @@
+/* these are all the media queries for "single-playlist-screen.html" page with the desktop first approach*/
+@media screen and (max-width: 1200px) {
+	/*  favourites text will be hidden for this viewport width*/
+	.favourites {
+		display: none !important;
+	}
+	/* reduced size of search bar */
+	.search-bar {
+		width: 30%;
+	}
+	input {
+		font-size: 11px !important;
+	}
+	.song-name-main h1 {
+		font-size: 2.4vw;
+	}
+	.desc {
+		font-size: 1.2vw;
+	}
+}
+@media screen and (max-width: 900px) {
+	/* jumbotron description */
+	.desc {
+		font-size: 1.6vw;
+	}
+	
+	/* hidden playlist  */
+	.playlist {
+		display:none;
+		
+	}
+	.list {
+		overflow: hidden;
+		height: auto;
+	}
+	.list-item {
+		background-color: #1a1e33;
+	}
+	/* hide plalist scrollbar */
+	.playlist::-webkit-scrollbar {
+		display: none;
+	}
+	/* when the playlist is hidden, main-section covers the whole page */
+	.main-page {
+		width: 100%;
+	}
+	/* jumbotron */
+	.jumbotron {
+		height: 30vw;
+	}
+	/* image in the jumbotron */
+	.jumbotron-image {
+		height: 30vw;
+		width: 30vw;
+	}
+	/* buttons and all */
+	.action-part p {
+		font-size: 2vw;
+	}
+	.btns > button {
+		height: 4vw;
+		width: 11vw;
+		font-size: 1.7vw;
+	}
+}
+@media screen and (max-width: 700px) {
+	
+	/* followers and author */
+    .search-bar input::placeholder{
+        color:transparent;
+    }
+    footer{
+        justify-content: space-around;
+    }
+    .followers,
+	.author {
+		font-size: 2vw;
+	}
+	/* jumbotron description */
+	.desc {
+		font-size: 1.8vw;
+    }
+    .extras{
+        justify-content: space-around;
+    }
+	/* extra icons in the footer at the right hand side */
+	.extras > div:nth-child(1) {
+		display: none;
+	}
+	.extras > div:nth-child(4) {
+		display: none;
+	}
+}
+@media screen and (max-width: 550px) {
+	/* navigation bar section */
+	/* website image */
+	.logo img {
+		height: 30px;
+		width: 30px;
+    }
+    .song-description-footer{
+        width: 48%;
+    }
+    
+    .jumbotron-detail{
+        display:none;
+    }
+	/* website name */
+	.name h1 {
+		font-size: 3vw;
+	}
+	/* website name */
+	.name h4 {
+		font-size: 2vw;
+	}
+	
+	/* notification bell and profile picture */
+	.bell,
+	.display-picture {
+		visibility: hidden;
+	}
+	.song-name-main h1 {
+		font-size: 3vw;
+	}
+	/* followers and author */
+	.followers,
+	.author {
+		font-size: 3vw;
+	}
+	/* jumbotron description */
+	.desc {
+		font-size: 3vw;
+		padding-left: 4px;
+	}
+	/* buttons and all in the jumbotron */
+	.action-part {
+		padding-top: 0px;
+	}
+	/* jumbotron */
+	.jumbotron {
+		height: 60vw;
+		text-align: justify;
+	}
+	/* image in the jumbotron */
+	.jumbotron-image {
+		height: 60vw;
+		width: 100%;
+	}
+	/* buttons and stuff */
+	.btns > button {
+		height: 8vw;
+		width: 17vw;
+		font-size: 3.2vw;
+	}
+	.extras{
+        display: none;
+    }
+    .display-picture{
+        display:none;
+    }
+}
+/* Thank you :) */
